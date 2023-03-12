@@ -1,7 +1,9 @@
 import './App.css';
-import {Search} from './components/search'
+import Search from './components/search'
 
 import { QueryClient, QueryClientProvider, useQuery } from '@tanstack/react-query'
+
+
 
 
 const queryClient = new QueryClient()
@@ -9,8 +11,12 @@ const queryClient = new QueryClient()
 function App() {
   return (
     <QueryClientProvider client={queryClient}>
-      <Search />
-      {/* <Example /> */}
+
+      <div className="d-flex flex-row">
+        <Search />
+  
+      </div>
+      
     </QueryClientProvider>
   )
 }
